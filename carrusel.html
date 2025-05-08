@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrusel de Imágenes</title>
+<style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f3f3f3;
+
+            text-align: center;
+
+            margin: 0;
+
+            padding: 20px;
+
+        }
+
+        h1 {
+
+            color: #4a148c;
+
+            margin-bottom: 20px;
+
+        }
+
+        .carrusel-container {
+
+            position: relative;
+
+            width: 80%;
+
+            max-width: 600px;
+
+            margin: auto;
+
+            overflow: hidden;
+
+            border: 8px solid #6a1b9a;
+
+            border-radius: 10px;
+
+            background-color: white;
+
+        }
+
+        .carrusel {
+
+            display: flex;
+
+            transition: transform 0.5s ease-in-out;
+
+        }
+
+        .carrusel img {
+
+            width: 100%;
+
+            flex-shrink: 0;
+
+        }
+
+        .boton {
+
+            background-color: #6a1b9a;
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            margin: 10px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+
+        }
+
+        .boton:hover {
+
+            background-color: #4a148c;
+
+        }
+</style>
+</head>
+<body>
+<h1>Carrusel de Imágenes</h1>
+<div class="carrusel-container">
+<div class="carrusel" id="carrusel">
+<img src="C:\Users\usuariocc10\Desktop\Proyecto_JS\GettyImages-1645160129.2e16d0ba.fill-1200x630.jpg" alt="Imagen 1">
+<img src="C:\Users\usuariocc10\Desktop\Proyecto_JS\images (1).jpg"Imagen 2">
+<img src="C:\Users\usuariocc10\Desktop\Proyecto_JS\images.jpg"Imagen 3">
+<img src="C:\Users\usuariocc10\Desktop\Proyecto_JS\kobe71213164.jpg" alt="Imagen 4">
+<img src="C:\Users\usuariocc10\Desktop\Proyecto_JS\unnamed-1-1.jpg" alt="Imagen 5">
+<img src="C:\Users\usuariocc10\Desktop\Proyecto_JS\images (1).jpg" alt="Imagen 6">
+</div>
+</div>
+<button class="boton" onclick="moverCarrusel(-1)">Anterior</button>
+<button class="boton" onclick="moverCarrusel(1)">Siguiente</button>
+<script>
+
+        const carrusel = document.getElementById('carrusel');
+
+        let index = 0;
+
+        function moverCarrusel(direccion) {
+
+            const total = carrusel.children.length;
+
+            index = (index + direccion + total) % total;
+
+            carrusel.style.transform = `translateX(-${index * 100}%)`;
+
+        }
+</script>
+</body>
+</html> 

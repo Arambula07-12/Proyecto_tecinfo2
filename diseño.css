@@ -1,0 +1,42 @@
+body {
+   background: linear-gradient(to bottom, #ffeb3b, #6a1b9a); /* amarillo a morado */
+   font-family: Arial, sans-serif;
+   text-align: center;
+   color: #000;
+}
+nav ul {
+   list-style: none;
+   padding: 0;
+   background-color: #4a148c;
+   margin: 0;
+}
+nav ul li {
+   display: inline;
+   padding: 14px 20px;
+}
+nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+}
+nav ul li a:hover {
+   background-color: #7b1fa2;
+}
+.marquesina {
+   background-color: #4a148c;
+   color: #fff;
+   padding: 10px;
+   font-size: 18px;
+}
+button {
+   background-color: #6a1b9a;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   margin-top: 20px;
+}
+button:hover {
+   background-color: #4a148c;
+}al
