@@ -1,0 +1,548 @@
+/* Variables de Color para fácil manejo y consistencia */
+:root {
+    --color-dark-blue: #003366; /* Azul Marino */
+    --color-cyan: #66CCEE;    /* Cian claro para acentos */
+    --color-brown: #8B4513;   /* Cafe para detalles o contraste sutil */
+    --color-light-gray: #F4F4F4;
+    --color-medium-gray: #CCCCCC;
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --color-accent-hover: #007bff; /* Un azul ligeramente más vibrante para hover */
+}
+
+/* Estilos Generales y Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-light-gray);
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-cyan);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* Botones Dinámicos */
+.btn {
+    display: inline-flex; /* Para alinear íconos con texto */
+    align-items: center;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px; /* Bordes más redondeados para Corporate Memphis */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn i {
+    margin-left: 8px;
+}
+
+.btn-primary {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #004080; /* Un azul marino un poco más oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--color-cyan);
+    color: var(--color-dark-blue);
+    border: 2px solid var(--color-cyan);
+}
+
+.btn-secondary:hover {
+    background-color: #55B5D8; /* Un cian un poco más oscuro */
+    border-color: #55B5D8;
+    transform: scale(1.02);
+}
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--color-dark-blue);
+    border: 2px solid var(--color-dark-blue);
+    padding: 10px 20px;
+}
+
+.btn-tertiary:hover {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+}
+
+/* Header */
+.header {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-cyan); /* Título en cian para contraste */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin-left: 30px;
+}
+
+.nav-menu ul li a {
+    color: var(--color-text-light);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--color-cyan);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-dark-blue) 0%, #1A4F8B 100%); /* Degradado de azul marino */
+    color: var(--color-text-light);
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+
+.hero-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Ligeramente redondeado */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Para Corporate Memphis, aquí podrías tener ilustraciones vectoriales más abstractas */
+}
+
+/* Estilos de Sección Genéricos */
+.main-content section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Courses Section */
+.courses-section {
+    background-color: var(--color-light-gray);
+    border-top: 5px solid var(--color-cyan);
+    border-bottom: 5px solid var(--color-cyan);
+}
+
+.course-categories {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category-btn {
+    background-color: var(--color-medium-gray);
+    color: var(--color-dark-blue);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-medium-gray);
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+    border-color: var(--color-dark-blue);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.course-card {
+    background-color: var(--color-text-light);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.course-card .card-header {
+    background-color: var(--color-cyan);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.course-card .card-header h3 {
+    color: var(--color-dark-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+}
+
+.course-level {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.card-description {
+    padding: 20px;
+    color: var(--color-text-dark);
+    flex-grow: 1; /* Permite que el texto ocupe espacio y empuje el footer */
+}
+
+.course-card .card-footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-medium-gray);
+    background-color: #f9f9f9;
+}
+
+.course-duration {
+    color: var(--color-brown); /* Cafe para el tiempo */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Resources Section */
+.resources-section {
+    background-color: var(--color-text-light);
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.resource-card {
+    background-color: var(--color-light-gray);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.resource-icon {
+    font-size: 3.5rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 20px;
+}
+
+.resource-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark-blue);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.resource-card p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--color-cyan);
+    color: var(--color-dark-blue);
+    padding: 80px 0;
+}
+
+.contact-section .section-title,
+.contact-section .section-description {
+    color: var(--color-dark-blue);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-text-light);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-dark-blue);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-medium-gray);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--color-text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-cyan);
+    box-shadow: 0 0 0 3px rgba(102, 204, 238, 0.3);
+}
+
+.contact-form .btn-primary {
+    width: auto;
+    display: block;
+    margin: 20px auto 0 auto; /* Centrar el botón */
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-cyan);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-illustration {
+        margin-top: 40px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .nav-menu ul li {
+        margin-left: 0;
+    }
+
+    .course-grid,
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+}
+
+/* Animaciones (opcional, para darle más vida) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text h2, .hero-text p, .hero-text .btn {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+.hero-text p { animation-delay: 0.2s; }
+.hero-text .btn { animation-delay: 0.4s; }
+
+.course-card, .resource-card {
+    animation: fadeIn 0.6s ease-out backwards;
+}
+.course-card:nth-child(2) { animation-delay: 0.1s; }
+.course-card:nth-child(3) { animation-delay: 0.2s; }
+/* Puedes añadir más delays para una carga escalonada */
