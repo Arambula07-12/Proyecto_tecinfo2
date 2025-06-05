@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación de Calidad para Maestros de Preparatoria</title>
+    <link rel="stylesheet" href="contenido.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Forjando el Futuro: Educación de Calidad</h1>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <div class="hero-text">
+                    <h2>Bienvenido, Maestro de Preparatoria</h2>
+                    <p>Descubre cursos gratuitos y recursos innovadores para potenciar tu enseñanza y transformar el aprendizaje de tus estudiantes.</p>
+                    <button class="btn btn-primary" data-section="cursos">Explorar Cursos <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="hero-illustration">
+                    <img src="https://via.placeholder.com/400x300/66CCEE/003366?text=Ilustración+Educativa" alt="Ilustración Educativa de Calidad">
+                </div>
+            </div>
+        </section>
+
+        <section id="cursos" class="courses-section">
+            <div class="container">
+                <h2 class="section-title">Nuestros Cursos Gratuitos</h2>
+                <p class="section-description">Diseñados para tu desarrollo profesional y la excelencia educativa.</p>
+
+                <div class="course-categories">
+                    <button class="category-btn active" data-category="todos">Todos</button>
+                    <button class="category-btn" data-category="pedagogia">Pedagogía Innovadora</button>
+                    <button class="category-btn" data-category="tecnologia">Tecnología Educativa</button>
+                    <button class="category-btn" data-category="bienestar">Bienestar Docente</button>
+                </div>
+
+                <div class="course-grid">
+                    <div class="course-card" data-category="pedagogia">
+                        <div class="card-header">
+                            <h3>Metodologías Activas de Aprendizaje</h3>
+                            <span class="course-level">Básico</span>
+                        </div>
+                        <p class="card-description">Aprende a implementar el Aprendizaje Basado en Proyectos (ABP) y Flipped Classroom en tu aula.</p>
+                        <div class="card-footer">
+                            <span class="course-duration"><i class="far fa-clock"></i> 8 horas</span>
+                            <button class="btn btn-secondary register-btn" data-course-id="1">Inscribirse <i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="tecnologia">
+                        <div class="card-header">
+                            <h3>Herramientas Digitales para la Evaluación</h3>
+                            <span class="course-level">Intermedio</span>
+                        </div>
+                        <p class="card-description">Domina plataformas como Kahoot!, Google Forms y Rubrics para una evaluación efectiva.</p>
+                        <div class="card-footer">
+                            <span class="course-duration"><i class="far fa-clock"></i> 6 horas</span>
+                            <button class="btn btn-secondary register-btn" data-course-id="2">Inscribirse <i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="bienestar">
+                        <div class="card-header">
+                            <h3>Gestión del Estrés y Bienestar Docente</h3>
+                            <span class="course-level">Básico</span>
+                        </div>
+                        <p class="card-description">Estrategias prácticas para mantener un equilibrio emocional y profesional.</p>
+                        <div class="card-footer">
+                            <span class="course-duration"><i class="far fa-clock"></i> 4 horas</span>
+                            <button class="btn btn-secondary register-btn" data-course-id="3">Inscribirse <i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="pedagogia">
+                        <div class="card-header">
+                            <h3>Diseño Curricular por Competencias</h3>
+                            <span class="course-level">Avanzado</span>
+                        </div>
+                        <p class="card-description">Cómo crear programas de estudio alineados a los estándares de calidad educativa.</p>
+                        <div class="card-footer">
+                            <span class="course-duration"><i class="far fa-clock"></i> 10 horas</span>
+                            <button class="btn btn-secondary register-btn" data-course-id="4">Inscribirse <i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="tecnologia">
+                        <div class="card-header">
+                            <h3>Inteligencia Artificial en el Aula</h3>
+                            <span class="course-level">Intermedio</span>
+                        </div>
+                        <p class="card-description">Explora herramientas de IA para personalizar el aprendizaje y automatizar tareas.</p>
+                        <div class="card-footer">
+                            <span class="course-duration"><i class="far fa-clock"></i> 7 horas</span>
+                            <button class="btn btn-secondary register-btn" data-course-id="5">Inscribirse <i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="pedagogia">
+                        <div class="card-header">
+                            <h3>Evaluación Formativa y Retroalimentación</h3>
+                            <span class="course-level">Básico</span>
+                        </div>
+                        <p class="card-description">Implementa estrategias de evaluación continua para mejorar el proceso de aprendizaje.</p>
+                        <div class="card-footer">
+                            <span class="course-duration"><i class="far fa-clock"></i> 5 horas</span>
+                            <button class="btn btn-secondary register-btn" data-course-id="6">Inscribirse <i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Recursos para Maestros</h2>
+                <p class="section-description">Guías, plantillas y herramientas útiles para tu labor docente.</p>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-book-open resource-icon"></i>
+                        <h3>Guía de Planificación Didáctica</h3>
+                        <p>Descarga una plantilla editable para organizar tus clases eficientemente.</p>
+                        <a href="#" class="btn btn-tertiary"><i class="fas fa-download"></i> Descargar</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-video resource-icon"></i>
+                        <h3>Webinars y Entrevistas</h3>
+                        <p>Accede a grabaciones de expertos en educación de calidad.</p>
+                        <a href="#" class="btn btn-tertiary"><i class="fas fa-external-link-alt"></i> Ver Videos</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-users resource-icon"></i>
+                        <h3>Comunidad de Aprendizaje</h3>
+                        <p>Únete a nuestra red de maestros para compartir experiencias y soluciones.</p>
+                        <a href="#" class="btn btn-tertiary"><i class="fas fa-comments"></i> Unirse</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">¿Tienes Preguntas? Contáctanos</h2>
+                <p class="section-description">Estamos aquí para apoyarte en tu camino hacia la excelencia educativa.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Educación de Calidad. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contenido.js"></script>
+</body>
+</html>
